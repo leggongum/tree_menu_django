@@ -68,6 +68,11 @@ TEMPLATES = [
     },
 ]
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+    "/var/www/static/",
+]
+
 WSGI_APPLICATION = 'tree_menu.wsgi.application'
 
 

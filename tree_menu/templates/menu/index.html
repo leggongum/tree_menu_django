@@ -2,5 +2,18 @@
 {% load draw_menu %}
 
 {% block content %}
-    {% draw_menu menu_name %}
+    <div class="menu">
+        <a href="/?menu_name={{menu}}" class="link">
+        <div class="menu_bg"></div>
+
+            <div class="menu_title">
+                {{ menu_name }}
+            </div>
+        </a>
+        <div class="link">
+            <div class="menu_items">
+                {% draw_menu menu_name %}
+            </div>
+        </div>
+    </div>
 {% endblock %}

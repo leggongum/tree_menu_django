@@ -1,0 +1,164 @@
+.container {
+  width: 1142px;
+  margin: 0 auto;
+}
+
+
+body {
+  background-color: #000;
+}
+a, u {
+  text-decoration: none;
+}
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  padding: 50px 0;
+}
+.menu {
+  -ms-flex-preferred-size: calc(33.33333% - 30px);
+  flex-basis: calc(33.33333% - 30px);
+
+  margin: 0 15px 30px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+}
+.link {
+  display: block;
+  padding: 30px 20px;
+  background-color: #1b1b1b;
+
+  overflow: hidden;
+
+  position: relative;
+}
+.link:hover,
+.link:hover .ag-courses-item_date {
+  text-decoration: none;
+  color: #FFF;
+}
+.link:hover .menu_bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+.menu_title {
+  min-height: 87px;
+  margin: 0 0 25px;
+
+  overflow: hidden;
+
+  font-weight: bold;
+  font-size: 32px;
+  color: #FFF;
+
+  z-index: 2;
+  position: relative;
+}
+
+.menu_items{
+  color: #FFF;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+li:hover{
+  color:rgb(170, 213, 254);
+}
+
+
+.menu_bg {
+  height: 128px;
+  width: 128px;
+  background-color: #f9b234;
+
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+
+  border-radius: 50%;
+
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.menu:nth-child(2n) .menu_bg {
+  background-color: #3ecd5e;
+}
+.menu:nth-child(3n) .menu_bg {
+  background-color: #e44002;
+}
+.menu:nth-child(4n) .menu_bg {
+  background-color: #952aff;
+}
+.menu:nth-child(5n) .menu_bg {
+  background-color: #cd3e94;
+}
+.menu:nth-child(6n) .menu_bg {
+  background-color: #4c49ea;
+}
+
+.date-box {
+  font-size: 18px;
+  color: #FFF;
+
+  z-index: 2;
+  position: relative;
+}
+.date {
+  font-weight: bold;
+  color: #f9b234;
+
+  -webkit-transition: color .5s ease;
+  -o-transition: color .5s ease;
+  transition: color .5s ease
+}
+
+
+@media only screen and (max-width: 979px) {
+  .menu {
+    -ms-flex-preferred-size: calc(50% - 30px);
+    flex-basis: calc(50% - 30px);
+  }
+  .menu_title {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 96%;
+  }
+
+}
+@media only screen and (max-width: 639px) {
+  .menu {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+  .menu_title {
+    min-height: 72px;
+    line-height: 1;
+
+    font-size: 28px;
+  }
+  .menu_items{
+    min-height: 72px;
+    line-height: 1;
+    font-size: 20px;
+  }
+  .link {
+    padding: 22px 40px;
+  }
+}

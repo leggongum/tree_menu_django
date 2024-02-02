@@ -6,6 +6,7 @@ from menu.models import MenuItem
 
 register = template.Library()
 
+
 @register.inclusion_tag('menu/draw_menu.html', takes_context=True)
 def draw_menu(context, menu_name):
     """
@@ -56,6 +57,6 @@ def get_child_items(parent_id, superior_items_ids, item_values):
     for child in current_parent_child_list:
         if child['id'] in superior_items_ids:
             child['child_items'] = get_child_items(
-                item_values, child['id'], superior_items_ids
+                child['id'], superior_items_ids, item_values
             )
     return current_parent_child_list
