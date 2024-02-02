@@ -13,6 +13,7 @@
 
 Установка:
 /для Windows/
+```
 git clone https://github.com/leggongum/tree_menu_django.git
 cd tree_menu_django
 virtualenv venv
@@ -20,17 +21,21 @@ cd tree_menu
 venv/Scripts/activate
 pip install -r requirements.txt
 python manage.py migrate
+```
 
 /для Linux/
+```
 git clone https://github.com/leggongum/tree_menu_django.git
 cd tree_menu_django
 . venv/bin/activate
 pip install -r requirements.txt
 python manage.py migrate
+```
 
 /через Docker/
+```
 git clone https://github.com/leggongum/tree_menu_django.git
 cd tree_menu_django
 docker build . -t tree_menu
 docker run -p 8000:8000 tree_menu
-
+```
